@@ -1,0 +1,65 @@
+#header-title {
+    font-family: Calibri;
+    font-weight: lighter;
+    text-align: center;
+  }
+  
+  .tasks-list {
+    font-family: Calibri;
+    padding: 0 40% 0 40%;
+  }
+  
+  .add-task {
+    display: flex;
+    margin-bottom: 2em;
+  }
+  
+  #task-input {
+    border: 2px solid black;
+    flex: auto;
+    padding: 1ex;
+  }
+  
+  #add-btn {
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    margin-left: 1ex;
+    padding: 1ex 2ex;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .task-content {
+    align-items: center;
+    border: 2px solid black;
+    display: flex;
+    margin-bottom: 1em;
+    padding: 1ex;
+  }
+  
+  .task-content input {
+    margin-right: 1em;
+  }
+  
+  .task-content span {
+    flex: auto;
+  }
+  
+  .task-content button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .task-content button img {
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  .task-content input:checked + span {
+    text-decoration: line-through;
+  }
