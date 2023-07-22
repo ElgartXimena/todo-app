@@ -1,0 +1,10 @@
+<li class="task-content">
+  <input type="checkbox">
+  <span>
+    <ng-content></ng-content>
+  </span>
+  <app-button 
+    [btn]="delete_btn"
+    (click)="emitDeleteTask()">
+  </app-button>
+</li>

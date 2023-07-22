@@ -1,4 +1,4 @@
 <form action="" class="add-task">
-  <input type="text" id="task-input">
-  <button id="add-btn">ADD</button>
+  <input #newTask type="text" id="task-input" placeholder="Escribe una tarea">
+  <button (click)="emitNewTask(newTask.value)" id="add-btn">ADD</button>
 </form>
