@@ -1,0 +1,18 @@
+.add-task {
+  display: flex;
+  margin-bottom: 2em;
+}
+
+#task-input {
+  border: 2px solid black;
+  flex: auto;
+  padding: 1ex;
+}
+
+#add-btn {
+  background-color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  margin-left: 1ex;
+  padding: 1ex 2ex;
+}

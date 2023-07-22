@@ -1,0 +1,19 @@
+.task-content {
+  align-items: center;
+  border: 2px solid black;
+  display: flex;
+  margin-bottom: 1em;
+  padding: 1ex;
+}
+  
+.task-content input {
+  margin-right: 1em;
+}
+  
+.task-content span {
+  flex: auto;
+}
+
+.task-content input:checked + span {
+  text-decoration: line-through;
+}
