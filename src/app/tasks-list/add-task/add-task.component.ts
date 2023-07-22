@@ -6,6 +6,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./add-task.component.scss']
 })
 export class AddTaskComponent {
+  add_btn = "../../../../assets/icons/check.svg";
+
   @Output() addTaskEvent = new EventEmitter<string>();
 
   emitNewTask(newTask: string) {

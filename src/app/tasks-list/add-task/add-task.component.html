@@ -1,4 +1,8 @@
-<form action="" class="add-task">
-  <input #newTask type="text" id="task-input" placeholder="Escribe una tarea">
-  <button (click)="emitNewTask(newTask.value)" id="add-btn">ADD</button>
+<form id="add-task">
+  <input #newTask type="text" id="task-input" placeholder="Escribe una tarea..." autocomplete="off">
+  <app-icon-btn 
+    [btn]="add_btn"
+    (click)="emitNewTask(newTask.value)" 
+    id="add-btn">
+  </app-icon-btn>
 </form>

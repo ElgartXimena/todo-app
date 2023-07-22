@@ -1,18 +1,17 @@
-.add-task {
+@import "../../../assets/styles/light-theme";
+@import "../../../assets/styles/input";
+
+
+#add-task {
   display: flex;
-  margin-bottom: 2em;
-}
+  margin: 1rem 0;
+  position: sticky;
+  top: 1rem;
+  background-color: $add-task-color;
+  backdrop-filter: blur(3rem);
 
-#task-input {
-  border: 2px solid black;
-  flex: auto;
-  padding: 1ex;
-}
-
-#add-btn {
-  background-color: white;
-  border: 2px solid black;
-  cursor: pointer;
-  margin-left: 1ex;
-  padding: 1ex 2ex;
+  input {
+    flex: auto;
+    margin: 1rem 0 1rem 1rem;
+  }
 }
