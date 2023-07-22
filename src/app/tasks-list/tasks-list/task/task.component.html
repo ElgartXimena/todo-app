@@ -1,10 +1,19 @@
 <li class="task-content">
-  <input type="checkbox">
+  <input type="checkbox" id="check">
+  <label for="check"></label>
   <span>
-    <ng-content></ng-content>
+      <ng-content></ng-content>
   </span>
-  <app-button 
-    [btn]="delete_btn"
-    (click)="emitDeleteTask()">
-  </app-button>
+  <div class="buttons">
+    <app-icon-btn
+        [btn]="copy_btn">
+    </app-icon-btn>
+    <app-icon-btn
+        [btn]="share_btn">
+    </app-icon-btn>
+    <app-icon-btn 
+        [btn]="delete_btn"
+        (click)="emitDeleteTask()">
+    </app-icon-btn>
+  </div>
 </li>

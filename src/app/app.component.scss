@@ -1,3 +1,5 @@
-.todo-app {
-  font-family: Calibri;
+@import "../assets/styles/light-theme";
+
+#todo-app {
+  background-color: $bg-color;
 }

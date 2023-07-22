@@ -1,0 +1,15 @@
+@import "../../../assets/styles/buttons";
+@import "../../../assets/styles/light-theme";
+
+button {
+  width: 6rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+  
+img {
+  height: 3rem;
+  width: 3rem;
+  background-color: transparent;
+  color: $icon-color;
+}

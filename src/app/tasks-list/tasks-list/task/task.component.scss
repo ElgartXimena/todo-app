@@ -1,19 +1,49 @@
-.task-content {
-  align-items: center;
-  border: 2px solid black;
-  display: flex;
-  margin-bottom: 1em;
-  padding: 1ex;
-}
-  
-.task-content input {
-  margin-right: 1em;
-}
-  
-.task-content span {
-  flex: auto;
-}
+@import "../../../../assets/styles/base";
+@import "../../../../assets/styles/buttons";
+@import "../../../../assets/styles/light-theme";
 
-.task-content input:checked + span {
-  text-decoration: line-through;
+
+.task-content {
+  display: flex;
+  align-items: center;
+  background-color: $task-color;
+  margin: 1rem;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    height: 3rem;
+    width: 3rem;
+    padding: 0;
+    margin: 1rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    border: 2px solid black;
+  }
+
+  input[type="checkbox"]:checked + label {
+    content: url(../../../../assets/icons/check.svg);
+  }
+  
+  input[type="checkbox"]:checked ~ span {
+    text-decoration: line-through;
+  }
+
+  span {
+    flex: auto;
+    text-align: left;
+    margin: 1rem 0;
+    overflow: hidden;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+
+  .buttons {
+    display: flex;
+  }
 }

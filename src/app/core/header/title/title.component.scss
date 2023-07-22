@@ -1,4 +1,7 @@
+@import "../../../../assets/styles/light-theme";
+
 #header-title {
+  font-size: 4.5rem;
   font-weight: lighter;
-  text-align: center;
+  color: $font-color;
 }

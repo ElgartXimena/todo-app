@@ -6,7 +6,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./task.component.scss']
 })
 export class TaskComponent {
-  delete_btn = '../../../assets/delete-icon.png';
+  copy_btn = "../../../../assets/icons/clipboard.svg";
+  share_btn = "../../../../assets/icons/share-nodes.svg";
+  delete_btn = "../../../../assets/icons/trash-can.svg";
 
   @Input() task: string = '';
   @Output() deleteTask = new EventEmitter<string>();
