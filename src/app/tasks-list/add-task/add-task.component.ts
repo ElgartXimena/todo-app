@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-add-task',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-task.component.scss']
 })
 export class AddTaskComponent {
+  @Output() addTaskEvent = new EventEmitter<string>();
 
+  emitNewTask(newTask: string) {
+    this.addTaskEvent.emit(newTask)
+    return false;
+  }
 }
