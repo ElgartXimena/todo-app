@@ -1,4 +1,5 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
+import { TasksService } from 'src/app/services/tasks/tasks.service';
 
 @Component({
   selector: 'app-add-task',
@@ -8,10 +9,13 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class AddTaskComponent {
   add_btn = "../../../../assets/icons/check.svg";
 
-  @Output() addTaskEvent = new EventEmitter<string>();
+  constructor(public ts: TasksService) {}
 
-  emitNewTask(newTask: string) {
-    this.addTaskEvent.emit(newTask)
-    return false;
+  addTask($event: Event, newTask: HTMLInputElement) {
+    $event.preventDefault();
+    if (newTask.value !== '') {
+      this.ts.addTask(newTask.value);
+      newTask.value = '';
+    }
   }
 }

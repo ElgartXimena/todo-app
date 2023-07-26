@@ -1,19 +1,21 @@
-<li class="task-content">
-  <input type="checkbox" id="check">
-  <label for="check"></label>
-  <span>
+<div class="task-content">
+  <input type="checkbox" [id]="task.id" (change)="toggleTask()">
+  <label [for]="task.id"></label>
+  <span [class.completed]="task.done">
       <ng-content></ng-content>
   </span>
   <div class="buttons">
     <app-icon-btn
-        [btn]="copy_btn">
+        [btn]="copy_btn"
+        (click)="copyTask()">
     </app-icon-btn>
     <app-icon-btn
-        [btn]="share_btn">
+        [btn]="share_btn"
+        (click)="shareTask()">
     </app-icon-btn>
     <app-icon-btn 
         [btn]="delete_btn"
-        (click)="emitDeleteTask()">
+        (click)="deleteTask()">
     </app-icon-btn>
   </div>
-</li>
+</div>

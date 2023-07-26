@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./tasks-list.component.scss']
 })
 export class TasksListComponent {
-  tasks: string[] = [];
 
-  addToList(task: string) {
-    this.tasks.unshift(task);
-  }
 }

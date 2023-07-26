@@ -2,7 +2,6 @@
   <input #newTask type="text" id="task-input" placeholder="Escribe una tarea..." autocomplete="off">
   <app-icon-btn 
     [btn]="add_btn"
-    (click)="emitNewTask(newTask.value)" 
-    id="add-btn">
+    (click)="addTask($event, newTask)">
   </app-icon-btn>
 </form>
