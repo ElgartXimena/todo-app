@@ -1,18 +1,19 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TasksService } from 'src/app/services/tasks/tasks.service';
+import { Task } from 'src/models/task.model';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss'],
 })
-export class ListComponent {
-  @Input() tasks: string[] = [];
-  @Output() deleteTaskEvent = new EventEmitter<string>();
+export class ListComponent implements OnInit {
+  tasks!: Task[];
 
-  deleteTask(task: string) {
-    const index = this.tasks.indexOf(task);
-    if (index !== -1) {
-      this.tasks.splice(index, 1);
-    }
+  constructor(public ts: TasksService) {}
+
+  ngOnInit(): void {
+    this.tasks = this.ts.getTasks();
   }
+
 }

@@ -8,6 +8,7 @@
   align-items: center;
   background-color: $task-color;
   margin: 1rem;
+  user-select: none;
 
   input[type="checkbox"] {
     display: none;
