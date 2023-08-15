@@ -9,8 +9,16 @@ export class TasksList {
         this.count = tasks.length;
     }
 
+    public getCount(): number {
+        return this.count;
+    }
+
     public getTasksList(): Task[] {
         return this.tasks;
+    }
+
+    public getTask(id: number): Task {
+        return this.tasks.find(task => task.id === id)!;
     }
 
     public addTask(task: Task): void {
@@ -28,7 +36,16 @@ export class TasksList {
         const index = this.tasks.indexOf(task);
         if (index !== -1) {
             this.tasks.splice(index, 1);
+            this.count--;
+            this.updateIds();
         }
-        this.count--;
     }
+
+    private updateIds(): void {
+        const totalTasks = this.tasks.length;
+        for (let i = 0; i < totalTasks; i++) {
+          this.tasks[i].id = totalTasks - i;
+        }
+    }
+
 }

@@ -1,5 +1,5 @@
 <div class="task-content">
-  <input type="checkbox" [id]="task.id" (change)="toggleTask()">
+  <input type="checkbox" [id]="task.id" (change)="toggleTask()" [checked]=task.done>
   <label [for]="task.id"></label>
   <span [class.completed]="task.done">
       <ng-content></ng-content>

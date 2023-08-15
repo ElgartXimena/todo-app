@@ -18,12 +18,17 @@ export class TasksService {
     }
   }
 
+  public getTask(id: number): Task {
+    return this.tasksList.getTask(id)
+  }
+
   public getTasks(): Task[] {
     return this.tasksList.getTasksList();
   }
 
   public addTask(task: string): void {
-    const newTask = new Task(task);
+    const index = this.tasksList.getCount() + 1;
+    const newTask = new Task(index, task);
     this.tasksList.addTask(newTask);
     this.saveChanges();
   }
