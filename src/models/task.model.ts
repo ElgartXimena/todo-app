@@ -1,13 +1,11 @@
 export class Task {
-    static nextId: number = 1;
     id: number;
     name: string;
     done: boolean;
 
-    constructor(name: string) {
-        this.id = Task.nextId;
+    constructor(id:number, name: string) {
+        this.id = id;
         this.name = name;
         this.done = false;
-        Task.nextId++;
     }
 }
